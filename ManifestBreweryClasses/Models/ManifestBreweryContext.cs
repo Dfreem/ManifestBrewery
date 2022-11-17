@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-
-namespace ManifestBreweryClasses.Models
+﻿namespace ManifestBreweryClasses.Models
 {
     public partial class ManifestBreweryContext : DbContext
     {
@@ -15,17 +10,29 @@ namespace ManifestBreweryClasses.Models
             : base(options)
         {
         }
-
+        #region main page pub employee
         public virtual DbSet<Account> Accounts { get; set; } = null!;
         public virtual DbSet<Address> Addresses { get; set; } = null!;
         public virtual DbSet<AddressType> AddressTypes { get; set; } = null!;
-        public virtual DbSet<Adjunct> Adjuncts { get; set; } = null!;
-        public virtual DbSet<AdjunctType> AdjunctTypes { get; set; } = null!;
         public virtual DbSet<AppConfig> AppConfigs { get; set; } = null!;
         public virtual DbSet<AppUser> AppUsers { get; set; } = null!;
-        public virtual DbSet<Barrel> Barrels { get; set; } = null!;
         public virtual DbSet<Batch> Batches { get; set; } = null!;
         public virtual DbSet<BatchContainer> BatchContainers { get; set; } = null!;
+        public virtual DbSet<InventoryTransaction> InventoryTransactions { get; set; } = null!;
+        public virtual DbSet<InventoryTransactionType> InventoryTransactionTypes { get; set; } = null!;
+        public virtual DbSet<Product> Products { get; set; } = null!;
+        public virtual DbSet<ProductContainerInventory> ProductContainerInventories { get; set; } = null!;
+        public virtual DbSet<ProductContainerSize> ProductContainerSizes { get; set; } = null!;
+        public virtual DbSet<Pub> Pubs { get; set; } = null!;
+        public virtual DbSet<PubEmployee> PubEmployees { get; set; } = null!;
+        public virtual DbSet<Recipe> Recipes { get; set; } = null!;
+        public virtual DbSet<Sale> Sales { get; set; } = null!;
+        public virtual DbSet<Style> Styles { get; set; } = null!;
+        #endregion
+        #region unused
+        public virtual DbSet<Adjunct> Adjuncts { get; set; } = null!;
+        public virtual DbSet<AdjunctType> AdjunctTypes { get; set; } = null!;
+        public virtual DbSet<Barrel> Barrels { get; set; } = null!;
         public virtual DbSet<BrewContainer> BrewContainers { get; set; } = null!;
         public virtual DbSet<ContainerSize> ContainerSizes { get; set; } = null!;
         public virtual DbSet<ContainerStatus> ContainerStatuses { get; set; } = null!;
@@ -39,31 +46,21 @@ namespace ManifestBreweryClasses.Models
         public virtual DbSet<IngredientInventoryAddition> IngredientInventoryAdditions { get; set; } = null!;
         public virtual DbSet<IngredientInventorySubtraction> IngredientInventorySubtractions { get; set; } = null!;
         public virtual DbSet<IngredientType> IngredientTypes { get; set; } = null!;
-        public virtual DbSet<InventoryTransaction> InventoryTransactions { get; set; } = null!;
-        public virtual DbSet<InventoryTransactionType> InventoryTransactionTypes { get; set; } = null!;
         public virtual DbSet<Mash> Mashes { get; set; } = null!;
         public virtual DbSet<MashStep> MashSteps { get; set; } = null!;
-        public virtual DbSet<Product> Products { get; set; } = null!;
-        public virtual DbSet<ProductContainerInventory> ProductContainerInventories { get; set; } = null!;
-        public virtual DbSet<ProductContainerSize> ProductContainerSizes { get; set; } = null!;
-        public virtual DbSet<Pub> Pubs { get; set; } = null!;
-        public virtual DbSet<PubEmployee> PubEmployees { get; set; } = null!;
-        public virtual DbSet<Recipe> Recipes { get; set; } = null!;
         public virtual DbSet<RecipeIngredient> RecipeIngredients { get; set; } = null!;
-        public virtual DbSet<Sale> Sales { get; set; } = null!;
-        public virtual DbSet<Style> Styles { get; set; } = null!;
         public virtual DbSet<Supplier> Suppliers { get; set; } = null!;
         public virtual DbSet<SupplierAddress> SupplierAddresses { get; set; } = null!;
         public virtual DbSet<UnitType> UnitTypes { get; set; } = null!;
         public virtual DbSet<UseDuring> UseDurings { get; set; } = null!;
         public virtual DbSet<Yeast> Yeasts { get; set; } = null!;
+        #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=localhost;uid=root;pwd=BassCase987;database=bits", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.30-mysql"));
+                optionsBuilder.UseMySql("server=127.0.0.1;uid=root;pwd=BassCase987;database=bits", ServerVersion.Parse("mysql 8.0.30"));
             }
         }
 

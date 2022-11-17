@@ -22,6 +22,11 @@ namespace ManifestBreweryClasses.Models
         public int? SalesEmployeeId { get; set; }
 
         public virtual PubEmployee? SalesEmployee { get; set; }
-        public virtual ICollection<InventoryTransaction> InventoryTransactions { get; set; }
+        public virtual ICollection<InventoryTransaction>? InventoryTransactions { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} id: {AccountId}";
+        }   
     }
 }
