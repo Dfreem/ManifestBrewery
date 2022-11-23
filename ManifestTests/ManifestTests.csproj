@@ -21,5 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ManifestBreweryClasses\ManifestBreweryClasses.csproj" />
+    <ProjectReference Include="..\ManifestBreweryAPI\ManifestBreweryAPI.csproj" />
   </ItemGroup>
 </Project>

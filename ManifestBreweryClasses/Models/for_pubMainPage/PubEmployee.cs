@@ -19,11 +19,10 @@ namespace ManifestBreweryClasses.Models
         public string? State { get; set; }
         public string? Zipcode { get; set; }
         public string? Phone { get; set; }
-        public string? SalesPersonName { get; set; }
 
         public virtual AppUser? AppUser { get; set; }
         public virtual Pub? Pub { get; set; }
-        public virtual ICollection<Account> Accounts { get; set; }
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Account>? Accounts { get; set; }
+        public virtual ICollection<Sale>? Sales { get; set; }
     }
 }

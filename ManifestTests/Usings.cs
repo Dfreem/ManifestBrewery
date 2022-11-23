@@ -1,6 +1,7 @@
 ﻿global using NUnit.Framework;
 global using Microsoft.EntityFrameworkCore;
 global using ManifestBreweryClasses;
+global using ManifestBreweryAPI;
 global using ManifestBreweryClasses.Models;
 global using ManifestTests;
 global using System.Data.Common;

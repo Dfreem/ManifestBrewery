@@ -20,7 +20,7 @@ public class AccountTest
     {
         accounts = db.Accounts.OrderBy(a => a.AccountId).ToList();
         Assert.That(accounts, Is.Not.Empty);
-        Assert.That(accounts.Count, Is.InRange(1, 20));
+        Assert.That(accounts?.Count, Is.AtLeast(1));
         PrintAll(accounts);
 
         a = db.Accounts.Find(5);
@@ -52,7 +52,7 @@ public class AccountTest
         //{ Console.WriteLine(thing.ContactName); }
     }
     [Test]
-    public void InsertTest()
+    public void Create()
     {
         a = new();
         a.Name = "test";
@@ -72,20 +72,19 @@ public class AccountTest
     }
 
     [Test]
-    public void UpdateTest()
+    public void UpdateCustomerTest()
     {
-        a = db.Accounts.Find(8);
-        Assert.IsNotNull(a);
+        a = db.Accounts.Find(1);
+        Assert.That(a, Is.Not.Null);
         a.ContactName = "Changed";
         db.Accounts.Update(a);
         db.SaveChanges();
-        a = db.Accounts.Find(8);
+        a = db.Accounts.Find(1);
         Assert.That(a!.ContactName, Is.EqualTo("Changed"));
-        Console.WriteLine(a);
+        Console.WriteLine(a.ContactName);
     }
 
-
-    void PrintAll(List<Account> accnts)
+    static void PrintAll(List<Account> accnts)
     {
         for (int i = 0; i < accnts.Count; i++)
         {
