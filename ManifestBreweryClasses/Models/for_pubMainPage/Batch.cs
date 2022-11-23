@@ -46,11 +46,11 @@ namespace ManifestBreweryClasses.Models
         public double? KegPrimingFactor { get; set; }
         public double? CarbonationTemp { get; set; }
 
-        public virtual Equipment Equipment { get; set; } = null!;
-        public virtual Recipe Recipe { get; set; } = null!;
-        public virtual ICollection<BatchContainer> BatchContainers { get; set; }
-        public virtual ICollection<IngredientInventorySubtraction> IngredientInventorySubtractions { get; set; }
-        public virtual ICollection<InventoryTransaction> InventoryTransactions { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual Equipment? Equipment { get; set; } = null!;
+        public virtual Recipe? Recipe { get; set; } = null!;
+        public virtual ICollection<BatchContainer>? BatchContainers { get; set; }
+        public virtual ICollection<IngredientInventorySubtraction>? IngredientInventorySubtractions { get; set; }
+        public virtual ICollection<InventoryTransaction>? InventoryTransactions { get; set; }
+        public virtual ICollection<Product>? Products { get; set; }
     }
 }

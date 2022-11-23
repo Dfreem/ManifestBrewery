@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 
 namespace ManifestBreweryClasses.Models
@@ -26,7 +26,7 @@ namespace ManifestBreweryClasses.Models
 
         public override string ToString()
         {
-            return $"{Name} id: {AccountId}";
+            return $"holder name: {Name} account id: {AccountId}";
         }   
     }
 }
