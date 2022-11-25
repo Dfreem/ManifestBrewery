@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=screen, initial-scale=1.0">
+        <meta name="author" content="Devin Freeman">
+
+        <title>Sales</title>
+
+        <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <link href="/UI/css/site.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper d-flex flex-column">
+            <header class="pb-4 ">
+                <img src="../UI/Images/transparentLogo.png" width="100px"></img>
+                <input type="search" id="search" class="m-3 float-end" placeholder="search">
+                <button type="button" class="btn btn-outline-light m-sm-3 float-end">
+                    search <i class="bi bi-search"></i>
+                </button>
+            </header>
+
+            <!--#region ================ Beer Buttons ================ -->
+
+            <div class="spacer"></div>
+            <div class="container-sm d-grid align-content-around" id="button-box">
+                <div class="row">
+                    <a href="#" class="beer-btn">beer</a>
+                    <a href="#" class="beer-btn">beer</a>
+                    <a href="#" class="beer-btn">beer</a>
+                    <a href="#" class="beer-btn">beer</a>
+                    <a href="#" class="beer-btn">beer</a>
+                    <a href="#" class="beer-btn">beer</a>
+                </div>
+                <br />
+                <div class="row">
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                </div>
+                <br />
+                <div class="row">
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                    <a href="#" class="beer-btn">Beer</a>
+                </div>
+            </div>
+            <!-- #endregion -->
+
+            <div id="hr" class="mx-5">
+                <hr class="hr" />
+            </div>
+            <!--#region ================ orders area ================ -->
+
+            <div class="bottom-half d-flex">
+                <div class="spacer"></div>
+                <div class="orders row">
+                    <table class="table table-hover text-nowrap text-center rounded">
+                        <thead>
+                            <tr class="text-bg-secondary">
+                                <th>item</th>
+                                <th>price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td scope="row">Item</td>
+                                <td>12</td>
+
+                            </tr>
+                            <tr>
+                                <td scope="row">Item</td>
+                                <td>12</td>
+
+                            </tr>
+                            <tr>
+                                <td scope="row">Item</td>
+                                <td>12</td>
+
+                            </tr>
+                            <tr>
+                                <td scope="row">Item</td>
+                                <td>12</td>
+
+                            </tr>
+                            <tr>
+                                <td scope="row">Item</td>
+                                <td>12</td>
+
+                            </tr>
+                            <tr>
+                                <td scope="row">Item</td>
+                                <td>12</td>
+
+                            </tr>
+
+                        </tbody>
+
+                        <caption class="text-bg-secondary d-sm-table-cell text-center">Total: </caption>
+                        <caption class="text-bg-dark d-sm-table-cell text-center">11.00</caption>
+                    </table>
+                </div>
+                <!--#endregion ================ orders area ================ -->
+                
+                <div class="d-flex flex-column">
+                    <textarea id="comment" name="comment" cols="20" rows="8"
+                        placeholder="Comments">Enter Comments</textarea>
+                </div>
+            </div>
+            <button id="send" class="btn btn-success">send order <i class="bi bi-send-check"></i></button>
+        </div>
+        <footer class="footer text-light text-center">
+            devins ok company
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
