@@ -29,11 +29,16 @@
 
 }
 
+html {
+    margin: auto;
+    max-width: 850px;
+    ;
+}
+
 body {
     background-color: var(--client-color2);
     /* background-image: url('/UI/Images/transparentLogo.png'); */
     background-position: 50% 40%;
-
     background-attachment: scroll;
     background-repeat: no-repeat;
 
@@ -48,9 +53,9 @@ header {
 
 #login {
     margin: auto;
-    max-width: 35vw;
+    /* max-width: 35em; */
     position: relative;
-    bottom: -70vh;
+    top: -160em;
 }
 
 #button-box {
@@ -143,11 +148,11 @@ tfoot {
 }
 
 .wrapper {
-    max-width: 830px;
+    max-width: 760px;
     /* max-height: 800px; */
     padding-bottom: 0;
     margin: auto;
-    min-width: 760px;
+    min-width: 730px;
     /* background-color: deeppink; */
 }
 
@@ -160,6 +165,7 @@ tfoot {
     opacity: 100%;
     height: 1em;
 }
+
 #send {
 
     position: relative;
@@ -180,4 +186,87 @@ table {
     background-image: url('../Images/transparentLogo.png');
     /* background-position: 50% 75%; */
     background-repeat: no-repeat;
+}
+
+#login-pic {
+    height: 500px;
+    /* background-image: url('/Images/manifest_raybeams.png'); */
+    /* margin: auto; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#icon1,
+#icon2,
+#icon3 {
+    position: relative;
+}
+
+#icon1 {
+    /* left: 4em; */
+    margin: auto;
+    image-orientation: from-image;
+    top: -30em;
+    width: 800px;
+
+}
+
+#icon2 {
+    image-orientation: from-image;
+    filter: opacity(50%);
+    right: 0em;
+    top: -74em;
+    width: 650px;
+}
+
+
+#icon3 {
+    image-orientation: from-image;
+    filter: opacity(45%);
+    right: 2em;
+    top: -112em;
+    width: 575px;
+}
+
+/* #icon4 {
+    image-orientation: from-image;
+    filter: opacity(100%);
+    position: absolute;
+    visibility: hidden;
+    top: 10em;
+    right: -50em;
+} */
+
+/* #icon4 {
+    image-orientation: from-image;
+    filter:opacity(40%);
+    position: absolute;
+    visibility: visible;
+    top: 12em;
+    width: 400px;
+  */
+@keyframes swoop {
+    from {
+        filter: opacity(100%);
+        position: absolute;
+        visibility: hidden;
+        top: 10em;
+        right: -50em;
+    }
+
+    to {
+        image-orientation: from-image;
+        filter: opacity(40%);
+        position: absolute;
+        visibility: visible;
+        top: 12em;
+        width: 400px;
+    }
+}
+}
+
+#icon5,
+#icon4 {
+    animation: swoop 4 cubic-bezier(0.6, -0.28, 0.735, 0.045) 2 1 forward;
 }
